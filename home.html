@@ -6,16 +6,22 @@
     <title>Document</title>
     <style>
         * {
-            font-family: Arial, sans-serif;
+            font-family: nexa, sans-serif;
+            text-align: center;
+
         }
         .calculadora {
             border: solid 1px black;
+            border-radius: 5%;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            margin: 0 auto;
             height: 300px;
             width: 350px;
-            padding: 10px;
+            padding: 15px;
+            background-color: #333;
         }
         .calculadora button {
             width: 50px;
@@ -24,7 +30,7 @@
             font-size: 20px;
         }
         .calculadora input {
-            width: 100%;
+            width: 90%;
             height: 50px;
             font-size: 20px;
             text-align: center;
@@ -81,6 +87,10 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .presentacion {
+            text-align: center;
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
@@ -91,41 +101,42 @@
             <li class="dropdown">
                     <a class="dropbtn">Proyectos</a>
                     <div class="dropdown-content">
-                        <a href="#">Servicio 1</a>
-                        <a href="#">Servicio 2</a>
-                        <a href="#">Servicio 3</a>
+                        <a href="#">Calculadora</a>
+                        <a href="#">Mantenedor</a>
                     </div>
             </li>
         </ul>
         <div class="presentacion">
+            <img src="oar2.jpg" alt="" width="200" height="200" style="border-radius: 50%;">
             <h1>Hola, soy un desarrollador web</h1>
             <p>Bienvenido a mi página web. Aquí encontrarás información sobre mis proyectos y servicios.</p>
         </div>
-        <h1>calculadora</h1>
+
+        <h1>Calculadora</h1>
         <div class="calculadora">
-            <form action="">
-                <input type="text" id="pantalla">
-                <button id="n9">9</button>
-                <button id="n8">8</button>
-                <button id="n7">7</button>
+            <form action=" ">
+                <input type="text" id="entrada">
+                <button class="btn" data-valor="9">9</button>
+                <button class="btn">8</button>
+                <button class="btn">7</button>
                 <button id="nce">C</button>
                 <button id="nce">CE</button>
-                <button id="n6">6</button>
-                <button id="n5">5</button>
-                <button id="n4">4</button>
+                <button class="btn">6</button>
+                <button class="btn">5</button>
+                <button class="btn">4</button>
                 <button id="multiplicacion">x</button>
                 <button id="division">/</button>
-                <button id="n3">3</button>
-                <button id="n2">2</button>
-                <button id="n1">1</button>
+                <button class="btn">3</button>
+                <button class="btn">2</button>
+                <button class="btn">1</button>
                 <button id="suma">+</button>
                 <button id="resta">-</button>
-                <button id="n0">0</button>
-                <button id="n00">00</button>
+                <button class="btn">0</button>
+                <button  class="btn" id="n00">00</button>
                 <button id="decimal">.</button>
                 <button id="igual">=</button>
-
             </form>
         </div>
+        <script src="calculadora.js"></script>
 </body>
 </html>
