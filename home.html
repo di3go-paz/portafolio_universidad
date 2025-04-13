@@ -34,13 +34,9 @@
             height: 50px;
             font-size: 20px;
             text-align: center;
-        }
+        } 
         ul {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
         }
 
         li {
@@ -90,53 +86,155 @@
         .presentacion {
             text-align: center;
             margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 100px;
         }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        header {
+            display: flex;
+            background-color: #333;
+            color: white;
+            list-style-type: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .sobremi {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .chat {
+            height: 50px;
+            width: 50px;
+            background-color: #333;
+            border-radius: 50%;     
+            position: fixed;
+            color: white;
+            margin-left: 95%;
+            bottom: 17%;
+            right: 3%;
+            justify-content: center;
+            align-items: center;
+            border-color: aqua;
+            border: solid 1px;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            overflow: hidden;
+
+            transition: width 0.3s ease, height 0.3s,border-radius 0.3, ease;
+            z-index: 1000;
+        }
+        .chat:hover {
+            background-color: #555;
+        }
+        .chat.expanded {
+            width: 300px;
+            height: 400px;
+            border-radius: 15%;
+            flex-direction: column;
+            align-self: start;
+            justify-content: flex-start;
+            padding: 10px;
+        }
+        .chat.chat.expanded span {
+            display: none;
+        }
+        .chat.expanded .chat-content {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .tecnologias {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
     </style>
+    
 </head>
-<body>
+<body style="border:0px" background="fondo.jpg">
+    <header>
         <ul>
+            <li><img src="logoheader.png" alt="" width="50px" height="50px"></li>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#sobremi">About</a></li>
+            <li><a href="#pie">Contacto</a></li>
             <li class="dropdown">
                     <a class="dropbtn">Proyectos</a>
                     <div class="dropdown-content">
-                        <a href="#">Calculadora</a>
-                        <a href="#">Mantenedor</a>
+                        <a href="calculadora.html">Calculadora</a>
+                        <a href="mantenedor.html">Mantenedor</a>
                     </div>
             </li>
         </ul>
+    </header>
+    <div  style="margin-top: 100px;">
+        <p>        </p>
+    </div>
         <div class="presentacion">
             <img src="oar2.jpg" alt="" width="200" height="200" style="border-radius: 50%;">
             <h1>Hola, soy un desarrollador web</h1>
             <p>Bienvenido a mi página web. Aquí encontrarás información sobre mis proyectos y servicios.</p>
+            <img src="logohtml.png" alt="" width="100px" height="100px">
+            <img src="logocss.png" alt="" width="100px" height="100px">
+            <img src="logojavascript.png" alt="" width="100px" height="100px">
+        </div class="contenido">
+        <div class="sobremi" id="sobremi">
+            <div class="personal">
+                <h1>Sobre mí</h1>
+                <p>Hola, soy un desarrollador web apasionado por la tecnología y el diseño. Me encanta crear aplicaciones web interactivas y funcionales.</p>
+                <p>En mi tiempo libre, disfruto aprendiendo nuevas tecnologías y trabajando en proyectos personales.</p>
+                <p>Si estás interesado en trabajar conmigo o simplemente quieres charlar, no dudes en contactarme.</p>
+            </div>
+            <div class="tecnologias">
+                <h1>Tecnologías que manejo</h1>
+                <p>HTML, CSS, JavaScript(proximante),MySQL</p>
+                <p>Me gusta aprender nuevas tecnologías y mejorar mis habilidades constantemente.</p>
+            </div>
         </div>
-
-        <h1>Calculadora</h1>
-        <div class="calculadora">
-            <form action=" ">
-                <input type="text" id="entrada">
-                <button class="btn" data-valor="9">9</button>
-                <button class="btn">8</button>
-                <button class="btn">7</button>
-                <button id="nce">C</button>
-                <button id="nce">CE</button>
-                <button class="btn">6</button>
-                <button class="btn">5</button>
-                <button class="btn">4</button>
-                <button id="multiplicacion">x</button>
-                <button id="division">/</button>
-                <button class="btn">3</button>
-                <button class="btn">2</button>
-                <button class="btn">1</button>
-                <button id="suma">+</button>
-                <button id="resta">-</button>
-                <button class="btn">0</button>
-                <button  class="btn" id="n00">00</button>
-                <button id="decimal">.</button>
-                <button id="igual">=</button>
-            </form>
+        <div class="chat">
+            <span><img src="chat.png" alt=""></span>
         </div>
+        <footer id="pie">
+            <ul>
+                Contacto
+                diego paz    
+            </ul>
+            <ul>
+                desarrollador web
+            </ul>
+        </footer>
         <script src="calculadora.js"></script>
 </body>
 </html>
